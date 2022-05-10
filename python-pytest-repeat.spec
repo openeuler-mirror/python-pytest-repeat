@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        0.9.1
-Release:        1
+Release:        2
 Summary:        pytest plugin for repeating tests
 
 License:        MPL-2.0
@@ -23,6 +23,7 @@ Summary:        pytest plugin for repeating tests
 Provides:       python-%{pypi_name}
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
+BuildRequires:  python3-setuptools_scm
 BuildRequires:  python3-pip
 %description -n python3-%{pypi_name}
 pytest-repeat is a plugin for py.test that makes it easy to repeat a single
@@ -73,5 +74,8 @@ mv %{buildroot}/doclist.lst .
 
 
 %changelog
+* Wed May 18 2022 lvxiaoqian <xiaoqian@nj.iscas.ac.cn> - 0.9.1-2
+- add necessary BuildRequires
+
 * Wed Jul 14 2021 ice-kylin <wminid@yeah.net> - 0.9.1-1
 - Initial package
